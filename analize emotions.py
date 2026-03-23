@@ -8,7 +8,7 @@ def analizar_sentimiento(texto):
     Polaridad == 0: Neutro
     """
     analisis = TextBlob(texto)
-    # Traducimos si es necesario (opcional, TextBlob funciona mejor en inglés)
+    # Traducimos si es necesario (opcional, TextBlob funciona mejor en ingles)
     # polaridad va de -1.0 a 1.0
     polaridad = analisis.sentiment.polarity
     
@@ -20,7 +20,7 @@ def analizar_sentimiento(texto):
         return "Neutro", polaridad
 
 # Lista de frases para probar el script
-frases_ejemplo = [
+frases = [
     "I love this new Python project, it is amazing!",
     "This is the worst bug I have ever seen in my life.",
     "The weather today is normal, nothing special.",
@@ -28,7 +28,7 @@ frases_ejemplo = [
 ]
 
 print("--- Resultados del Analizador de Sentimientos ---")
-for frase in frases_ejemplo:
+for frase in frases:
     resultado, score = analizar_sentimiento(frase)
     print(f"Frase: {frase}")
     print(f"Sentimiento: {resultado} (Score: {score})\n")
